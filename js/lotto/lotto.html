@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 번호 추첨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>로또 번호 추첨기</h1>
+    <script>
+        // var num = parseInt(Math.random() * 45 + 1);
+        // document.write(num);
+
+        // --------------------------------------------
+
+        // var lotto = [1, 2, 3, 4, 5, 6];
+        // lotto.push(7);
+        // document.write(lotto);
+
+        // var lotto = [];
+        // lotto.push(parseInt(Math.random() * 45 + 1));
+        // lotto.push(parseInt(Math.random() * 45 + 1));
+        // lotto.push(parseInt(Math.random() * 45 + 1));
+        // lotto.push(parseInt(Math.random() * 45 + 1));
+        // lotto.push(parseInt(Math.random() * 45 + 1));
+        // lotto.push(parseInt(Math.random() * 45 + 1));
+
+        // document.write(lotto);
+        
+        // ---------------------------------------------
+
+        // var lotto = [];
+
+        // for (let i = 0; i < 6; i++) {
+        //     lotto.push(parseInt(Math.random() * 45 + 1)); 
+        // }
+        // document.write(lotto);
+
+        // ---------------------------------------------
+
+        // var lotto = [];
+
+        // for (let i = 0; i < 6; i++) {
+        //     var num = parseInt(Math.random() * 45 + 1);
+        //     if (lotto.indexOf(num) == -1) {
+        //         lotto.push(num);
+        //     }
+        // }
+        // document.write(lotto);
+
+        // ----------------------------------------------
+
+        // var lotto = [];
+
+        // // for (let i = 0; i < 6; i++) {
+        // //     var num = parseInt(Math.random() * 45 + 1);
+        // //     if (lotto.indexOf(num) == -1) {
+        // //         lotto.push(num);
+        // //     }
+        // // }
+        // // for 문으로 작성ㅏㅎㄹ 경우 6개가 아닌데 완성될 수 있다
+        // // 중복될 경우 push가 되지 않을 거기 때문에
+        // while (lotto.length < 6) {
+        //     var num = parseInt(Math.random() * 45 + 1);
+        //     if (lotto.indexOf(num) == -1) {
+        //         lotto.push(num);
+        //     }
+        // }
+        // document.write(lotto);
+
+        // ----------------------------------------------
+
+        var lotto = [];
+
+        while (lotto.length < 6) {
+            var num = parseInt(Math.random() * 45 + 1);
+            if (lotto.indexOf(num) == -1) {
+                lotto.push(num);
+            }
+        }
+        lotto.sort((a, b) => a-b);
+        // document.write(lotto);
+        document.write("<div class = 'ball ball1'>"+ lotto[0] + "</div>");
+        document.write("<div class = 'ball ball2'>"+ lotto[1] + "</div>");
+        document.write("<div class = 'ball ball3'>"+ lotto[2] + "</div>");
+        document.write("<div class = 'ball ball4'>"+ lotto[3] + "</div>");
+        document.write("<div class = 'ball ball5'>"+ lotto[4] + "</div>");
+        document.write("<div class = 'ball ball6'>"+ lotto[5] + "</div>");
+        // for (let i = 0; i < lotto.length; i++) {
+        //     document.write("<div class = 'ball ball1'" + i+ ">" + lotto[i] + "</div>");
+        // }
+    </script>
+</body>
+</html>
