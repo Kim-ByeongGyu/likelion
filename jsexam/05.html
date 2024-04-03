@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // -- 0402 --
+        // 자바스크립트의 함슈는 일급갹체로 취급된다.
+        // 함수도 타입이 될 수 있다.
+        function test () {
+            console.log("test");
+        }
+        // ()가 있으면 실행한다는 뜻으로 리턴값을 전달한다.
+        // 없다면 함수 자체를 전달한다.
+        // let c = test;
+
+        function c(abc) {
+            // 함수의 매개변수로 함수를 받을 수 있다.
+            // abc();
+            return abc;
+        }
+
+        let ttt = c(test);
+
+        console.log(ttt);
+
+        c(test)();
+
+
+    </script>
+</body>
+</html>

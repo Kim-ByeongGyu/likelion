@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array = [1, 2, 3, 4, 5];
+      console.log(array.join()); // 1,2,3,4,5
+      console.log(array.join(" ")); // 1 2 3 4 5
+      console.log(array.join(", ")); // 1, 2, 3, 4, 5
+      console.log(array.join("  -  "));
+
+      const numbers = [1, 2, 3, 4, 5];
+
+      let sum1 = 0;
+      numbers.forEach((n) => {
+        sum1 += n;
+      });
+      console.log(sum1);
+
+      let sum2 = array.reduce(
+        (sum, n) => sum + n, // 행위 (행위를 {}로 묶는다면 아래 와 같이 리턴값을 적어야한다.)
+        0 // sum의 초기값
+      );
+      console.log(sum2);
+
+      let sum = numbers.reduce((accumulator, current) => {
+        console.log({ accumulator, current });
+        return accumulator + current;
+      }, 0);
+      console.log(sum);
+    </script>
+  </body>
+</html>

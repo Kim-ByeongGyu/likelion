@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            hello();
+
+            // 호이스팅 되지 않는다.
+            // func1();
+            // 함수 호이스팅
+            function hello () {
+                console.log("hello");
+            }
+            
+            // 함수 중복 정의 가능!!
+            // 중복 정의일 때는 가장 마지막에 정의된 함수가 적용됨
+            function hello () {
+                console.log("hello kbg");
+            }
+
+            // 상수 func1에 함수가 정의.. 함수가 일급 객체이므로 가능
+            const func1 = function () {
+                console.log("func1 hello!!");
+            }
+
+            func1();
+            
+            // 화살표 함수
+            const func2 = () => console.log("func2 hello!!");
+            
+            func2();
+
+            function hi(a) {
+                console.log("hello " + a);
+            }
+            // const hi2 = (a) => console.log("hello " + a);
+            const hi2 = a => console.log("hello " + a);
+
+            hi(10);
+            hi("aa");
+
+            hi2("kbg");
+
+            function sum(a, b) {
+                return a + b;
+            }
+            const sum3 = function(a, b) {
+                return a + b;
+            }
+            const sum2 = (a, b) => a + b;
+
+            console.log(sum(2, 3));
+            console.log(sum2(2, 3));
+            console.log(sum3(2, 3));
+
+            function minus(a, b) {
+                return a - b;
+            }
+            const minus2 = function(a, b) {
+                return a - b;
+            }
+            const minus3 = (a, b) => a - b;
+
+            console.log(minus(5, 3));
+            console.log(minus2(5, 3));
+            console.log(minus3(5, 3));
+        </script>
+    </body>
+</html>

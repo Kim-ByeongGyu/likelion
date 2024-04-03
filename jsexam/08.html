@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // {}만 있으면 객체
+        const obj = {};
+        console.log(typeof obj);
+
+        const dog = {
+            name : "멍멍이",
+            age : 2
+        };
+
+        console.log(dog);
+        console.log(dog.name);
+        console.log(dog["name"]);
+        console.log(dog.age);
+
+        const ironman = {
+            name : "토니 스타크",
+            actor : "로버트 다우니 주니어",
+            alias : "아이언맨",
+        }
+
+        const captaimAmerica = {
+            name : "스티븐 로저스",
+            actor : "크리스 에반스",
+            alias : "캡틴 아메리카",
+        }
+
+        console.log(ironman);
+        console.log(captaimAmerica);
+
+        console.log(ironman.actor);
+
+        function print(hero) {
+            // 객체의 비구조화
+            const {alias, name, actor} = hero
+            const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor}입니다.`;
+            console.log(text);
+        }
+        print(captaimAmerica);
+
+        // const dog2 = {
+        //     name : "멍멍이",
+        //     age : 3,
+        // };
+
+        // const { name } = "멍멍이";
+    </script>
+</body>
+</html>

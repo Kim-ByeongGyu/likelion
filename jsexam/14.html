@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const array = [1, 2, 3, 4, 5, 6, 7, 8];
+        const squared1 = [];
+        for (let i = 0; i < array.length; i++) {
+            squared1.push(array[i] * array[i]);
+        }
+        console.log("squared1 ::: [" + squared1 + "]");
+
+        const squared2 = [];
+        array.forEach((n) => {
+            squared2.push(n * n);
+        });
+        console.log("squared2 ::: [" + squared2 + "]");
+
+        const squared3 = array.map((n) => n * n);
+        console.log("squared3 ::: [" + squared3 + "]");
+
+        const superheroes = [
+            "아이언맨",
+            "캡틴 아메리카",
+            "토르",
+            "닥터 스트레인지",
+        ];
+        const index = superheroes.indexOf("토르");
+        console.log(index);
+    </script>
+  </body>
+</html>

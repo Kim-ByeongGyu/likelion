@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const users = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 28 },
+            { name: "Dave", age: 35 },
+        ];
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].age >= 30) {
+                console.log(`${users[i].name} : ${users[i].age}`);
+            }
+        }
+    </script>
+  </body>
+</html>
