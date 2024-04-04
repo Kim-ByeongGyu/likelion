@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>클릭</button>
+    <button>클릭</button>
+
+    <script>
+        // function changeColor(event) {
+            //     console.log(event);
+            //     console.log("event target ::: " + this);
+            //     console.log(this);
+            //     const color = prompt("색상을 입력하세요.");
+            //     document.body.style.backgroundColor = color;
+            // }
+            const changeColor = (event) => {
+                let red = Math.floor(Math.random() * 256);
+                let green = Math.floor(Math.random() * 256);
+                let blue = Math.floor(Math.random() * 256);
+
+                console.log(event);
+                console.log("event target ::: " + this);
+                console.log(this);
+                console.log(event.target);
+                // function으로 함수를 생성했을 때 this와 같은 값을 얻어냄
+
+                // const color = prompt("색상을 입력하세요.");
+                // document.body.style.backgroundColor = color;
+                document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        };
+
+        // const btn = document.querySelector("button");
+        // btn.addEventListener("click", changeColor);
+        
+        // querySelectorAll, getElementsByTagName > 리스트로 리턴
+        const btn = document.querySelectorAll("button");
+        for (let i = 0; i < btn.length; i++){
+            btn[i].addEventListener("click", changeColor);
+        }
+        // const btn = document.getElementsByTagName("button");
+        // for (let i = 0; i < btn.length; i++){
+        //     btn[i].addEventListener("click", changeColor);
+        // }
+    </script>
+</body>
+</html>

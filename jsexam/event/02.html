@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="number">0</h2>
+    <div>
+      <button id="increase">+1</button>
+      <button id="decrease">-1</button>
+    </div>
+
+    <script>
+        let currentNumber = 0;
+        document.getElementById("increase").addEventListener("click", () => {
+            currentNumber++;
+            document.getElementById("number").innerText = currentNumber;
+        });
+        document.getElementById("decrease").addEventListener("click", () => {
+            currentNumber--;
+            document.getElementById("number").innerText = currentNumber;
+        });
+    </script>
+    <!-- <script src="src/index.js"></script> -->
+</body>
+</html>

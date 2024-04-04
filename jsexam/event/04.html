@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>클릭</button>
+    <button>클릭</button>
+
+    <script>
+        const changeColor = (event) => {
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+            event.target.removeEventListener("click", changeColor);
+            // function일떄는 this.removeEventListener("click", changeColor);
+        };
+
+        const btn = document.querySelectorAll("button");
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", changeColor);
+        }
+    </script>
+  </body>
+</html>
